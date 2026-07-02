@@ -1,0 +1,22 @@
+# Bonus Option C: run the backend in a container.
+# Ollama is expected to run on the HOST machine (not containerized here),
+# reachable via host.docker.internal.
+#
+# Usage:
+#   docker compose up --build
+# Then open http://localhost:8000/docs
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+      - MODEL_NAME=llama3.2:1b
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./backend/logs:/app/logs
+      - ./backend/data:/app/data

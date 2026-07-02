@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+*.egg-info/
+
+# Environment
+.env
+backend/.env
+
+# Logs & runtime data
+backend/logs/*.log
+backend/logs/*.log.*
+backend/data/feedback.jsonl
+
+# Node / React
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
