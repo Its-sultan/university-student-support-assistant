@@ -25,9 +25,9 @@ User  →  React Frontend  →  FastAPI Backend  →  Local LLM (Ollama)  →  A
 | Error handling (backend down, model down, empty input, slow response) | ✅ |
 | API test script (`tests/test_api.py`) | ✅ |
 | Prompt improvement (original vs improved) | ✅ |
-| **Bonus B:** Simple RAG over a university FAQ | ✅ |
-| **Bonus E:** Answer rating (Good / Average / Poor) | ✅ |
-| **Bonus C:** Docker container for the backend | ✅ |
+| Simple RAG over a university FAQ | ✅ |
+| Answer rating (Good / Average / Poor) | ✅ |
+| Docker container for the backend | ✅ |
 
 ---
 
@@ -38,22 +38,22 @@ University Support Assistant/
 ├── backend/
 │   ├── main.py             # FastAPI app: /health, /ask, /feedback
 │   ├── llm_client.py       # Talks to the Ollama LLM
-│   ├── rag.py              # Simple keyword RAG (Bonus B)
-│   ├── prompts.py          # Original + improved prompts (Task 6)
+│   ├── rag.py              # Simple keyword RAG 
+│   ├── prompts.py          # Original + improved prompts
 │   ├── config.py           # Settings from env / .env
-│   ├── logging_config.py   # Logging setup (Task 8)
+│   ├── logging_config.py   # Logging setup
 │   ├── data/faq.md         # University FAQ used by RAG
 │   ├── logs/app.log        # Generated at runtime
-│   └── Dockerfile          # Bonus C
+│   └── Dockerfile          # 
 ├── frontend/               # Vite + React
 │   ├── src/App.jsx
 │   ├── src/api.js
 │   └── src/components/FeedbackButtons.jsx
-├── tests/test_api.py       # API test script (Task 5)
+├── tests/test_api.py       # API test script
 ├── docs/
-│   ├── report.md           # Technical report (4–6 pages)
-│   ├── reflection.md       # Reflection answers (Task 9)
-│   └── screenshots/        # Put your evidence screenshots here
+│   ├── report.md           # Technical report
+│   ├── reflection.md       # Reflection answers
+│   └── screenshots/        
 ├── requirements.txt
 ├── docker-compose.yml
 ├── .env.example
